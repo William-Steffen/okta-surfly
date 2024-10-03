@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {AuthConfigModule} from "./auth/auth-config.module";
 import {HomeModule} from "./module/home/home.module";
 import {ErrorComponent} from "./pages/error/error.component";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {ErrorComponent} from "./pages/error/error.component";
     AppRoutingModule,
     AuthConfigModule,
     HomeModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
