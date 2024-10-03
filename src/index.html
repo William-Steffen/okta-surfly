@@ -9,5 +9,31 @@
 </head>
 <body>
   <app-root></app-root>
+  <script>
+    (function(s,u,r,f,l,y){s[f]=s[f]||{init:function(){s[f].q=arguments}};
+      l=u.createElement(r);y=u.getElementsByTagName(r)[0];l.async=1;
+      l.src='https://surfly.com/surfly.js';y.parentNode.insertBefore(l,y);})
+    (window,document,'script','Surfly');
+
+    var settings = {
+      // Surfly session options can be set here, or at the Company/Plan levels.
+      widget_key: 'fc943e7fe7e3478f99c76b044eb62302',
+      localhost_requests_allowed: true,
+      cookie_transfer_proxying: false,
+      //url: 'https://ethiaspreprod.ethias.be/myethias/public-B/fr'
+    };
+
+    Surfly.init(settings, function(initResult) {
+      if (initResult.success) {
+        // API calls can now be made!
+        if (!Surfly.isInsideSession) {
+          Surfly.button();
+        }
+      }
+      else{
+        console.log("Surfly was unable to initialize properly.")
+      }
+    });
+  </script>
 </body>
 </html>

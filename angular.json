@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@nebular/theme/styles/prebuilt/default.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -57,6 +58,9 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "options": {
+            "port": 4205
+          },
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
@@ -87,7 +91,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/@nebular/theme/styles/prebuilt/default.scss"
             ],
             "scripts": []
           }
