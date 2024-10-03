@@ -22,7 +22,6 @@ import {RouterModule} from "@angular/router";
     NbThemeModule.forRoot({ name: 'default' }),
     NbLayoutModule,
     NbEvaIconsModule,
-    AppRoutingModule,
     NbCardModule,
     NbButtonModule,
     AppRoutingModule,
